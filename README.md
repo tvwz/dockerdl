@@ -1,5 +1,12 @@
 # Cloudflare-群晖Docker仓库镜像
 这个项目是一个基于 Cloudflare Workers 的 群晖Docker 镜像代理，它能够解决群晖docker镜像拉取问题，支持在群晖注册表搜索以及选择对应版本号下载镜像。
+## 部署方式
+
+| 变量名 | 示例 | 必填 | 备注 | 
+|--|--|--|--|
+| URL302 | https://t.me/yikouqing |❌| 主页302跳转 |
+| URL | https://www.baidu.com/ |❌| 主页伪装(设为`nginx`则伪装为nginx默认页面) |
+| UA | netcraft |❌| 支持多元素, 元素之间使用空格或换行作间隔 |
 
 ## 部署方式
 
@@ -29,10 +36,3 @@ sudo tee /etc/docker/daemon.json <<-'EOF'
 EOF
 sudo systemctl daemon-reload
 sudo systemctl restart docker
-
-## 变量说明
-| 变量名 | 示例 | 必填 | 备注 | 
-|--|--|--|--|
-| URL302 | https://t.me/CMLiussss |❌| 主页302跳转 |
-| URL | https://www.baidu.com/ |❌| 主页伪装(设为`nginx`则伪装为nginx默认页面) |
-| UA | netcraft |❌| 支持多元素, 元素之间使用空格或换行作间隔 |
